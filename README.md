@@ -101,7 +101,7 @@ sudo cp build/kissat /usr/local/bin/
 
 ## ⚠️ Memory Requirement Notice
 
-Training the XGBoost model may require **at least 16 GB of RAM**, depending on the system configuration and dataset loading strategy. Systems with insufficient memory may experience slowdowns, out-of-memory errors, or crashes during training.
+Training the XGBoost model may require **around 16 GB of RAM**, depending on the system configuration and dataset loading strategy. Systems with insufficient memory may experience slowdowns, out-of-memory errors, or crashes during training.
 
 If your system has limited memory, consider:
 - Reducing batch sizes or dataset size.
