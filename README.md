@@ -18,18 +18,19 @@ cipher fault identification task.
 ## 📁 Directory Structure
 
 ```
-.
 ├── Accuracy_Calculator.ipynb
 ├── Atom_KSD_Data
-│   ├── X_test.npy
-│   ├── X_train.npy
-│   ├── X_val.npy
-│   ├── y_test.npy
-│   ├── y_train.npy
-│   └── y_val.npy
-├── CSV_Files/Ensemble_output_analysis.csv
-├── CSV_Files/Rank_SuccessPr_analysis.csv
+│   ├── X_test.npy
+│   ├── X_train.npy
+│   ├── X_val.npy
+│   ├── y_test.npy
+│   ├── y_train.npy
+│   └── y_val.npy
+├── CSV_Files
+│   ├── Ensemble_output_analysis.csv
+│   └── Rank_SuccessPr_analysis.csv
 ├── Injection_Round_Detection/
+├── LFSR+NFSR_Injection/
 ├── README.md
 └── saved_models
     ├── mlp_model_fault-69_KSD-70.keras
@@ -62,18 +63,22 @@ Contains CSV files used for statistical analysis and visualization.
 
 - **Rank_SuccessPr_analysis.csv** – Aggregated statistics for fault-wise average rank and success probability under Top-1 selection. Used to generate plots and tables in the paper.
 
----
-
-### 📂 Injection_Round_Detection/
-Contains scripts for the search of the fault injection round under the assumption that it is unknown to the attacker. A separate README.md file is inside that folder for the explanation of the scripts.
 
 ### 📁 saved_models/
-Contains pretrained machine learning models used in the experiments.
+Contains pretrained machine learning models used in the experiments under the assumption of single-bit fault model on LFSR register i.e., 69 classes.
 
 - **mlp_model_fault-69_KSD-70.keras** – Trained Multi-Layer Perceptron (MLP) model.
 - **xgboost_model_fault-69_KSD-70.json** – Trained XGBoost model.
 
 These models are loaded directly by the notebook for evaluation.
+
+---
+
+### 📂 Injection_Round_Detection/
+Contains scripts for the search of the fault injection round under the assumption that it is unknown to the attacker. A separate README.md file is inside that folder for the explanation of the scripts.
+
+### 📂 LFSR+NFSR_Injection/
+Contains a trained multi-layer perceptron model to detect fault location for the case when fault can be injected anywhere in the entire internal state (LFSR + NFSR) of the Atom cipher, i.e., 159 classes.
 
 ---
 
