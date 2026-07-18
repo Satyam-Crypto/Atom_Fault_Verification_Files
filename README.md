@@ -29,6 +29,7 @@ cipher fault identification task.
 ├── CSV_Files
 │   ├── Ensemble_output_analysis.csv
 │   └── Rank_SuccessPr_analysis.csv
+│   └── Atom_Signature_70Cols.csv
 ├── Injection_Round_Detection/
 ├── LFSR+NFSR_Injection/
 ├── README.md
@@ -63,6 +64,7 @@ Contains CSV files used for statistical analysis and visualization.
 
 - **Rank_SuccessPr_analysis.csv** – Aggregated statistics for fault-wise average rank and success probability under Top-1 selection. Used to generate plots and tables in the paper.
 
+-**Atom_Signature_70Cols.csv** - Signature of the Atom cipher. A cell at location (i,j) represent the probabability of KSD_{j-1} to be 1 when fault is injected at location {i-1}. 
 
 ### 📁 saved_models/
 Contains pretrained machine learning models used in the experiments under the assumption of single-bit fault model on LFSR register i.e., 69 classes.
